@@ -99,6 +99,7 @@ function updateGame() {
     .then((response) => {
       if (response.status == 200) {
         alert("Game atualizado!")
+        location.reload()
       }
     })
     .catch((err) => {
