@@ -1,9 +1,9 @@
-# Python + API Node
+# Python + API Node (Express)
 ![NPM](https://img.shields.io/npm/l/react)
 
 # Descrição
 
-Exemplo de uma aplicação Python consumindo dados de uma API Node.js. O sistema também conta com uma interface web desenvolvida com Javascript para consumo da API.
+Exemplo de uma aplicação Python consumindo dados de uma API Node.js com Express. O sistema também conta com uma interface web desenvolvida com Javascript para consumo da API.
 
 ## Como executar
 
