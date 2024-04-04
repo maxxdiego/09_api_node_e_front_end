@@ -8,6 +8,7 @@ import jwt from 'jsonwebtoken'
 const app = express()
 const JWTSecret = 'apigamessecret'
 
+// Função de Autenticação (JWT - Json Web Token)
 function Auth(req, res, next) {
     const authToken = req.headers['authorization']
     if(authToken != undefined){
@@ -32,6 +33,7 @@ function Auth(req, res, next) {
     }
 }
 
+// Configurações do Express
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 app.use(cors())
@@ -95,6 +97,7 @@ app.put("/game/:id", Auth, (req,res) => {
     }
 })
 
+// Endpoint de Login
 app.post("/auth", (req, res) => {
     const {email, password} = req.body
     if(email != undefined){
@@ -127,6 +130,7 @@ app.post("/auth", (req, res) => {
     }  
 })
 
+// Rodando a API na porta 4000
 const port = 4000
 app.listen(port,() => {
     console.log(`API rodando na porta ${port}.`)
