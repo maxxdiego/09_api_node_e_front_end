@@ -13,7 +13,7 @@ Pré-requisitos:
 
 ```bash
 # clonar repositório
-git clone https://github.com/maxxdiego/08_python-e-api-node.git
+git clone https://github.com/maxxdiego/09_python-e-api-node.git
 
 ```
 
