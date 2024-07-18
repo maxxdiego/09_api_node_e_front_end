@@ -14,7 +14,7 @@ Pré-requisitos:
 
 ```bash
 # clonar repositório
-git clone https://github.com/maxxdiego/08_api-node.git
+git clone https://github.com/maxxdiego/09_api-node.git
 
 ```
 
