@@ -45,7 +45,7 @@ def cadastrarGames():
     response = requests.post(url, json=data, headers=headers)
     
     # Verifica a resposta da API
-    if response.status_code == 200:
+    if response.status_code == 201:
         print('Dados enviados com sucesso para a API!')
     else:
         print('Falha ao enviar dados para a API:', response.text)

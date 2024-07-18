@@ -1,9 +1,10 @@
-# Python + API Node (Express)
+# API Node (Express) + Python
 ![NPM](https://img.shields.io/npm/l/react)
 
 # Descrição
 
-Exemplo de uma aplicação Python consumindo dados de uma API Node.js com Express. O sistema também conta com uma interface web desenvolvida com Javascript para consumo da API.
+O projeto consiste em uma API Node com o tema "Games" desenvolvida com Express. 
+Para consumo da API foi desenvolvido um front-end com HTML, CSS e Javascript, além de uma aplicação em Python.
 
 ## Como executar
 
@@ -13,7 +14,7 @@ Pré-requisitos:
 
 ```bash
 # clonar repositório
-git clone https://github.com/maxxdiego/09_python-e-api-node.git
+git clone https://github.com/maxxdiego/08_api-node.git
 
 ```
 
