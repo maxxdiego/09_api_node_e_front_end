@@ -1,47 +1,60 @@
-import game from "../models/Games.js"
-import mongoose from "mongoose"
+import Game from "../models/Games.js"
 
-const Game = mongoose.model("Game", game)
-
-class GameService {
-    Create(title, year, price) {
-        const newGame = new Game({
-            title,
-            year,
-            price
-        })
-        newGame.save()
-    }
-    
-    GetAll() {
-        const games = Game.find()
-        return games
+class gameService {
+   
+    async getAll() {
+        try {
+            const games = await Game.find()
+            return games
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    GetOne(id) {
-        const game = Game.findOne({_id: id})
-        return game
+    async Create(title, year, price) {
+        try{
+            const newGame = new Game({
+                title,
+                year,
+                price
+            })
+            await newGame.save()
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    Delete(id) {
-        Game.findByIdAndDelete(id).then(() => {
+    async Delete(id) {
+        try {
+            await Game.findByIdAndDelete(id);
             console.log(`Game com a id: ${id} foi deletado.`)
-        }).catch(err => {
-            console.log(err)
-        })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    Update(id, title, year, price) {
-        Game.findByIdAndUpdate(id, {
-            title,
-            year,
-            price
-        }).then(() => {
+    async Update(id, title, year, price) {
+        try {
+            await Game.findByIdAndUpdate(id, {
+                title,
+                year,
+                price
+            })
             console.log(`Dados do game com id: ${id} alterados com sucesso.`)
-        }).catch(err => {
-            console.log(err)
-        })
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    async getOne(id) {
+        try {
+            const game = await Game.findOne({_id: id})
+            return game
+        } catch (error) {
+            console.log(error)
+        }
     }
 }
 
-export default new GameService()
+export default new gameService()

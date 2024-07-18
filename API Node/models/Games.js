@@ -1,9 +1,11 @@
 import mongoose from 'mongoose'
 
-const game = new mongoose.Schema({
+const gameSchema = new mongoose.Schema({
     title: String,
     year: Number,
     price: Number
 })
 
-export default game
+const Game = mongoose.model('Game', gameSchema)
+
+export default Game
