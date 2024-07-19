@@ -30,8 +30,6 @@ app.get("/", (req, res) => {
         delete_game: "/game/:id",
         update_game: "/game/:id",
         get_one_game: "/game/:id",
-        create_user: "/user",
-        auth_user: "/auth"
       },
     },
   ]);
