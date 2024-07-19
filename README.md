@@ -9,7 +9,7 @@ email: admin@email.com
 senha: admin
 ```
 
-Link da API hospedada no Vercel: https://api-node-swart.vercel.app
+Link da API hospedada no Vercel: https://09-api-node.vercel.app/
 
 # Descrição
 
