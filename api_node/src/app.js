@@ -31,6 +31,9 @@ app.get("/", (req, res) => {
         update_game: "/game/:id",
         get_one_game: "/game/:id",
       },
+      front_end: {
+        url: "https://consumo-api-node.vercel.app/"
+      }
     },
   ]);
 });
