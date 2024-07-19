@@ -71,7 +71,7 @@ axios.get("https://09-api-node.vercel.app/games", axiosConfig).then((response) =
 
         var editBtn = document.createElement("button")
         editBtn.innerHTML = "Editar"
-        editBtn.classList.add("btn", "btn-warning", "mb-3")
+        editBtn.classList.add("btn", "btn-warning", "mb-3", "mr-2")
         editBtn.addEventListener("click", function(){
           loadForm(item)
         })
