@@ -12,7 +12,7 @@ function login(){
   var email = emailField.value
   var password = passwordField.value
 
-  axios.post("https://api-node-swart.vercel.app/auth", {
+  axios.post("https://09-api-node.vercel.app/auth", {
     email,
     password
   }).then(res => {
@@ -44,7 +44,7 @@ const updateBtn = document.getElementById("updateBtn")
 updateBtn.addEventListener("click", updateGame)
 
 // Enviando uma requisição GET para API para listar todos os games
-axios.get("https://api-node-swart.vercel.app/games", axiosConfig).then((response) => {
+axios.get("https://09-api-node.vercel.app/games", axiosConfig).then((response) => {
     const games = response.data.games
     const listGames = document.getElementById("games")
 
@@ -101,7 +101,7 @@ function createGame() {
     year: yearInput.value,
     price: priceInput.value,
   }
-  axios.post("https://api-node-swart.vercel.app/game", game, axiosConfig).then((response) => {
+  axios.post("https://09-api-node.vercel.app/game", game, axiosConfig).then((response) => {
       if (response.status == 201) {
         alert("Game cadastrado!")
         location.reload()
@@ -114,7 +114,7 @@ function createGame() {
 // Função para DELETAR games
 function deleteGame(listItem) {
   const id = listItem.getAttribute("data-id")
-  axios.delete(`https://api-node-swart.vercel.app/game/${id}`, axiosConfig).then(response => {
+  axios.delete(`https://09-api-node.vercel.app/game/${id}`, axiosConfig).then(response => {
       alert("Game deletado!")
       location.reload()
   }).catch(err => {
@@ -156,7 +156,7 @@ function updateGame() {
 
   var id = idInput.value
 
-  axios.put(`https://api-node-swart.vercel.app/game/${id}`, game, axiosConfig).then((response) => {
+  axios.put(`https://09-api-node.vercel.app/game/${id}`, game, axiosConfig).then((response) => {
       if (response.status == 200) {
         alert("Game atualizado!")
         location.reload()
