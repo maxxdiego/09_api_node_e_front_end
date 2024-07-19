@@ -52,7 +52,7 @@ python main.py
 ## Interface web
 ```bash
 # Localizada em
-\API Node\Consumo de API\index.html
+\api_node\consumo_api\index.html
 
 ```
 
