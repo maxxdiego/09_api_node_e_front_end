@@ -24,9 +24,6 @@ mongoose.connect(
 app.get("/", (req, res) => {
   res.json([
     {
-      get_games: {
-        href: "https://09-api-node.vercel.app/games",
-      },
       front_end: {
         href: "https://consumo-api-node.vercel.app/"
       },
