@@ -38,11 +38,6 @@ function logout() {
   location.href = "index.html";
 }
 
-// Capturando o botão de cadastrar
-const createBtn = document.getElementById("createBtn");
-// Escuta ao evento click no botão
-createBtn.addEventListener("click", createGame);
-
 // Capturando o botão de alterar
 const updateBtn = document.getElementById("updateBtn");
 // Escuta ao evento click no botão de alterar
@@ -141,6 +136,10 @@ function loadForm(listItem) {
 }
 
 // CADASTRO
+// Capturando o botão de cadastrar
+const createBtn = document.getElementById("createBtn");
+// Escuta ao evento click no botão
+createBtn.addEventListener("click", createGame);
 
 // Função para CADASTRAR games
 function createGame() {
