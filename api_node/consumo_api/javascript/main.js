@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // AXIOS CONFIG
   const axiosConfig = {
     headers: {
@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // LISTANDO OS JOGOS
   async function getGames() {
+    // Mostrar a mensagem de carregamento
+    const loadingElement = document.querySelector(".loading");
+    loadingElement.style.display = "block";
     try {
       const response = await axios.get(
         "https://09-api-node.vercel.app/games",
@@ -73,6 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     } catch (error) {
       console.log(error);
+    } finally {
+      // Ocultar a mensagem de carregamento após carregar os dados
+      loadingElement.style.display = "none";
     }
   }
   getGames();
