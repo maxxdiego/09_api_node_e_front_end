@@ -103,38 +103,6 @@ axios
     console.log(error);
   });
 
-
-// EXCLUSÃO
-
-// Função para DELETAR games
-function deleteGame(listItem) {
-  const id = listItem.getAttribute("data-id");
-  axios
-    .delete(`https://09-api-node.vercel.app/game/${id}`, axiosConfig)
-    .then((response) => {
-      alert("Game deletado!");
-      location.reload();
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-}
-
-// Função para carregar formulário de edição
-function loadForm(listItem) {
-  const id = listItem.getAttribute("data-id");
-  const title = listItem.getAttribute("data-title");
-  const platform = listItem.getAttribute("data-platform");
-  const year = listItem.getAttribute("data-year");
-  const price = listItem.getAttribute("data-price");
-
-  document.getElementById("idEdit").value = id;
-  document.getElementById("titleEdit").value = title;
-  document.getElementById("platformEdit").value = platform;
-  document.getElementById("yearEdit").value = year;
-  document.getElementById("priceEdit").value = price;
-}
-
 // CADASTRO
 // Capturando o botão de cadastrar
 const createBtn = document.getElementById("createBtn");
@@ -170,6 +138,37 @@ function createGame() {
     .catch((err) => {
       console.log(err);
     });
+}
+
+// EXCLUSÃO
+
+// Função para DELETAR games
+function deleteGame(listItem) {
+  const id = listItem.getAttribute("data-id");
+  axios
+    .delete(`https://09-api-node.vercel.app/game/${id}`, axiosConfig)
+    .then((response) => {
+      alert("Game deletado!");
+      location.reload();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
+
+// Função para carregar formulário de edição
+function loadForm(listItem) {
+  const id = listItem.getAttribute("data-id");
+  const title = listItem.getAttribute("data-title");
+  const platform = listItem.getAttribute("data-platform");
+  const year = listItem.getAttribute("data-year");
+  const price = listItem.getAttribute("data-price");
+
+  document.getElementById("idEdit").value = id;
+  document.getElementById("titleEdit").value = title;
+  document.getElementById("platformEdit").value = platform;
+  document.getElementById("yearEdit").value = year;
+  document.getElementById("priceEdit").value = price;
 }
 
 // ALTERAÇÃO
