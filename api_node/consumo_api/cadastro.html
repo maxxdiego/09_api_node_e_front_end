@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav_icon.ico" type="image/x-icon">
+    <title>The Games &copy; 2024</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/thegames_symbol.png" alt="The Games">
+            </div>
+            <div class="menu">
+                <ul class="menuItems">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="cadastro.html">Cadastrar jogos</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTAINER -->
+        <div class="containerCover">
+            <div class="container">
+                <!-- CONTENT -->
+                <div class="createContent">
+                    <!-- TITLE -->
+                    <div class="title">
+                        <h2>Cadastrar novo jogo</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="createForm" class="formPrimary">
+                            <input type="text" name="title" id="title" placeholder="Insira o título do jogo"
+                                class="inputPrimary">
+                            <input type="text" name="platform" id="platform" placeholder="Insira a plataforma do jogo"
+                                class="inputPrimary">
+                            <input type="number" name="year" id="year" placeholder="Insira o ano do jogo"
+                                class="inputPrimary">
+                            <input type="text" name="price" id="price" placeholder="Insira o preço do jogo"
+                                class="inputPrimary">
+                            <input type="submit" value="Cadastrar" id="createBtn" class="btnPrimary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footerContent">
+            <!-- FOOTER LEFT -->
+            <div class="footerLeft">
+                <ul class="footerItems">
+                    <li>Português (Brasil)</li>
+                    <li>English (US)</li>
+                    <li>Español</li>
+                    <li>Français (France)</li>
+                    <li>Italiano</li>
+                    <li>Deutsch</li>
+                    <li>العربية</li>
+                    <li>हिन्दी</li>
+                    <li>中文(简体)</li>
+                    <li>日本語</li>
+                </ul>
+            </div>
+            <!-- FOOTER RIGHT -->
+            <div class="footerRight">
+                <ul>
+                    <li>The Games &copy; 2024</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="javascript/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="yearnymous"></script>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/fav_icon.ico" type="image/x-icon">
+    <title>The Games &copy; 2024</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/thegames_symbol.png" alt="The Games">
+            </div>
+            <div class="menu">
+                <ul class="menuItems">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="cadastro.html">Cadastrar jogos</a></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- CONTAINER -->
+        <div class="containerCover">
+            <div class="container">
+                <!-- CONTENT -->
+                <div class="homeContent">
+                    <!-- CARD LISTA DE JOGOS  -->
+                    <div class="listGamesCard">
+                        <!-- TITLE -->
+                        <div class="title">
+                            <h2>Lista de jogos</h2>
+                        </div>
+                        <div class="games" id="games">
+                            <!-- Lista de jogos irá aqui -->
+                        </div>
+                    </div>
+                    <!-- CARD EDIÇÃO -->
+                    <div id="editModal" class="editModal">
+                        <div class="editContent">
+                            <span class="modalClose">&times;</span>
+                            <!-- TITLE -->
+                            <div class="title">
+                                <h2>Editar jogo</h2>
+                            </div>
+                            <form id="editForm">
+                                <input type="text" name="idEdit" id="idEdit" placeholder="ID" class="inputPrimary"
+                                    readonly><br>
+                                <input type="text" name="titleEdit" id="titleEdit" placeholder="Insira o novo título"
+                                    class="inputPrimary" required>
+                                <input type="text" name="platformEdit" id="platformEdit"
+                                    placeholder="Insira a nova plataforma do jogo" class="inputPrimary" required>
+                                <input type="number" name="yearEdit" id="yearEdit" placeholder="Insira o novo ano"
+                                    class="inputPrimary" required>
+                                <input type="text" name="priceEdit" id="priceEdit" placeholder="Insira o novo preço"
+                                    class="inputPrimary" required>
+                                <input type="submit" value="Alterar" id="updateBtn" class="btnPrimary">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footerContent">
+            <!-- FOOTER LEFT -->
+            <div class="footerLeft">
+                <ul class="footerItems">
+                    <li>Português (Brasil)</li>
+                    <li>English (US)</li>
+                    <li>Español</li>
+                    <li>Français (France)</li>
+                    <li>Italiano</li>
+                    <li>Deutsch</li>
+                    <li>العربية</li>
+                    <li>हिन्दी</li>
+                    <li>中文(简体)</li>
+                    <li>日本語</li>
+                </ul>
+            </div>
+            <!-- FOOTER RIGHT -->
+            <div class="footerRight">
+                <ul>
+                    <li>The Games &copy; 2024</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="javascript/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="yearnymous"></script>
+
+</html>

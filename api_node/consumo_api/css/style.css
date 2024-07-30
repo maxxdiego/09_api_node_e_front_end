@@ -1,13 +1,360 @@
-main {
-    background-color: #212529;
+/* Importando fontes do Google Fonts (https://fonts.google.com) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+/* Início estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-li {
-    font-size: 0.8rem
+:root {
+  --bg-color: #010101;
+  --bg-alpha: #010101e5;
+  --primary-color: #2383f2;
+  --primary-alpha: #2383f249;
+  --primary-hover: #0a54a9;
+  --secondary-color: #fff;
+  --third-color: #060606;
+  --fourth-color: #121212;
+  --fourth-color-alpha: #12121280;
+  --label-color: #777;
+
+}
+
+::placeholder {
+  font-family: "Poppins";
+  color: var(--label-color);
+}
+
+.containerCover {
+  background-image: url(/src/images/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-alpha);
+  min-height: 100vh;
 }
 
 .title {
-    color: #f1f1f1;
-    text-align: center;
+  font-family: "Poppins";
+  color: var(--secondary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+/* Fim estilos gerais */
+
+/* Início Form */
+.formPrimary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+input {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.inputPrimary {
+  font-family: "Poppins";
+  color: var(--fourth-color);
+  width: 100%;
+  border: none;
+}
+
+.inputPrimary:focus {
+  outline: 0.15rem solid var(--primary-color);
+}
+
+.btnPrimary {
+  font-family: "Poppins";
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 3rem;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  background-color: var(--primary-hover);
+}
+/* Fim Form */
+
+/* Início Navbar */
+.navbar {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--fourth-color);
+}
+
+.navbar .logo img {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  width: 4rem;
+}
+
+.navbar .menu .menuItems {
+  display: flex;
+  font-family: "Poppins";
+  list-style: none;
+}
+
+.navbar .menu .menuItems li {
+  padding: 1.2rem;
+}
+
+.navbar .menu .menuItems a {
+  color: var(--label-color);
+}
+
+.navbar .menu .menuItems a:hover {
+  color: var(--primary-color);
+}
+/* Fim Navbar */
+
+/* Início conteúdo Login */
+.loginContent {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.loginContent .logo {
+  margin-top: -5%;
+}
+
+.loginContent .logo .logoImg {
+  max-width: 25rem;
+}
+
+.loginContent .loginCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 60%;
+  margin-right: 3rem;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 var(--primary-alpha);
+  border: solid 1px var(--primary-color);
+  font-family: "Poppins";
+  color: var(--secondary-color);
+}
+
+.loginContent .loginCard .loginCardHeader {
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.loginContent .loginCard .loginCardBody {
+  width: 70%;
+}
+/* Fim conteúdo Login */
+
+/* Início conteúdo Home */
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.homeContent .listGamesCard {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  padding: 2rem;
+  background-color: var(--fourth-color-alpha);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: solid 1px var(--primary-alpha);
+  border-radius: 0.5rem;
+}
+
+.homeContent .listGamesCard .games {
+  display: grid;
+  grid-template-columns: 17% 17% 17% 17% 17%;
+  gap: 1rem 2.5rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  font-size: 0.8rem;
+
+}
+
+.homeContent .listGamesCard .games img {
+  width: 50%;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--primary-color);
+  padding-top: 1rem;
+  filter: grayscale();
+}
+
+.homeContent .listGamesCard .games img:hover {
+filter: none;
+cursor: pointer;
+scale: 0.9;
+transition: 0.2s;
+box-shadow: 0 8px 32px 0 var(--primary-alpha);
+}
+
+.homeContent .listGamesCard .games h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.homeContent .listGamesCard .games li {
+  list-style: none;
+  color: var(--secondary-color);
+  margin-bottom: 0.1rem;
+  
+}
+
+.homeContent .listGamesCard .games .btnDel {
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  background-color: var(--fourth-color);
+  color: var(--secondary-color);
+  height: 1.6rem;
+  width: 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.homeContent .listGamesCard .games .btnEdit {
+  font-family: "Poppins";
+  font-size: 0.7rem;
+  background-color: var(--fourth-color);
+  color: var(--secondary-color);
+  height: 1.6rem;
+  width: 3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  margin-top: 0.3rem;
+}
+
+.homeContent .listGamesCard .games .btnDel:hover {
+  background-color: #f22323;
+}
+
+.homeContent .listGamesCard .games .btnEdit:hover {
+  background-color: var(--primary-color);
+}
+/* Fim conteúdo Home */
+
+/* Início conteúdo Cadastro */
+.createContent {
+  width: 30%;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+}
+/* Fim conteúdo Cadastro */
+
+/* Início conteúdo Edição */
+.editModal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.7);
+}
+
+.editContent {
+  background-color: var(--fourth-color-alpha);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: solid 2px var(--primary-alpha);
+  border-radius: 0.5rem;
+  margin: 5% auto;
+  padding: 20px;
+  width: 35%;
+}
+
+.modalClose {
+  color: var(--label-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modalClose:hover,
+.modalClose:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Fim conteúdo Edição */
+
+/* Início Footer */
+.footerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 8rem;
+  font-family: "Poppins";
+  font-size: 0.6rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--third-color);
+  color: var(--label-color);
+}
+
+.footerContent li {
+  list-style: none;
+}
+
+.footerContent li:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.footerContent .footerLeft .footerItems {
+  display: flex;
+  text-align: left;
+}
+
+.footerContent .footerLeft .footerItems li {
+  padding: 0.8rem;
+}
+
+.footerContent .footerRight {
+  font-size: 0.8rem;
+  margin-right: 1rem;
+}
+/* Fim Footer */
