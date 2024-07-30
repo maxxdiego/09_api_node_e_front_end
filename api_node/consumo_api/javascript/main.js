@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // LISTANDO OS JOGOS
   async function getGames() {
     // Mostrar a mensagem de carregamento
-    const loadingElement = document.querySelector(".loading");
+    const loadingElement = document.getElementById("loading");
     loadingElement.style.display = "block";
+
     try {
       const response = await axios.get(
         "https://09-api-node.vercel.app/games",
