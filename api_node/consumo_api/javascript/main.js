@@ -6,11 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  // Capturando o botão de alterar
-  const updateBtn = document.getElementById("updateBtn");
-  if (updateBtn) {
-    // Escuta ao evento click no botão de alterar
-    updateBtn.addEventListener("click", updateGame);
+  // LOGOUT
+  function logout() {
+    localStorage.removeItem("token");
+    // alert("Deslogado com sucesso!");
+    location.href = "index.html";
   }
 
   // LISTANDO OS JOGOS
@@ -101,21 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Função para carregar formulário de edição
-  function loadForm(listItem) {
-    const id = listItem.getAttribute("data-id");
-    const title = listItem.getAttribute("data-title");
-    const platform = listItem.getAttribute("data-platform");
-    const year = listItem.getAttribute("data-year");
-    const price = listItem.getAttribute("data-price");
-
-    document.getElementById("idEdit").value = id;
-    document.getElementById("titleEdit").value = title;
-    document.getElementById("platformEdit").value = platform;
-    document.getElementById("yearEdit").value = year;
-    document.getElementById("priceEdit").value = price;
-  }
-
   // Capturando o botão de cadastrar
   const createBtn = document.getElementById("createBtn");
   if (createBtn) {
@@ -160,6 +145,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ALTERAÇÃO
 
+  // Função para carregar formulário de edição
+  function loadForm(listItem) {
+    const id = listItem.getAttribute("data-id");
+    const title = listItem.getAttribute("data-title");
+    const platform = listItem.getAttribute("data-platform");
+    const year = listItem.getAttribute("data-year");
+    const price = listItem.getAttribute("data-price");
+
+    document.getElementById("idEdit").value = id;
+    document.getElementById("titleEdit").value = title;
+    document.getElementById("platformEdit").value = platform;
+    document.getElementById("yearEdit").value = year;
+    document.getElementById("priceEdit").value = price;
+  }
+
+  // Capturando o botão de alterar
+  const updateBtn = document.getElementById("updateBtn");
+  if (updateBtn) {
+    // Escuta ao evento click no botão de alterar
+    updateBtn.addEventListener("click", updateGame);
+  }
+
   // Função para ALTERAR games
   async function updateGame() {
     try {
@@ -195,12 +202,5 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       console.log(error);
     }
-  }
-
-  // LOGOUT
-  function logout() {
-    localStorage.removeItem("token");
-    // alert("Deslogado com sucesso!");
-    location.href = "index.html";
   }
 });
