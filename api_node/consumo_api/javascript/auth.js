@@ -24,6 +24,6 @@ async function login() {
       // alert("Login realizado com sucesso!");
       location.href = "home.html";
     } catch (error) {
-      alert("Login incorreto!" + error);
+      alert("Não foi possível realizar o login. Erro:" + error);
     }
   }
