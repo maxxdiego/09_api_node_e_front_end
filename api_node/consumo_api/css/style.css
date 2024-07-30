@@ -108,6 +108,12 @@ input {
   width: 4rem;
 }
 
+.navbar .logo img:hover {
+  filter:brightness(10);
+  scale: 0.9;
+  cursor: pointer;
+  transition: 0.5s;
+}
 .navbar .menu .menuItems {
   display: flex;
   font-family: "Poppins";
