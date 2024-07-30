@@ -196,11 +196,4 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(error);
     }
   }
-
-  // LOGOUT
-  function logout() {
-    localStorage.removeItem("token");
-    // alert("Deslogado com sucesso!");
-    location.href = "index.html";
-  }
 });
