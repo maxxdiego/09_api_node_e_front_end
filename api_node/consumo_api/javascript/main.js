@@ -6,13 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  // LOGOUT
-  function logout() {
-    localStorage.removeItem("token");
-    // alert("Deslogado com sucesso!");
-    location.href = "index.html";
-  }
-
   // LISTANDO OS JOGOS
   async function getGames() {
     // Mostrar a mensagem de carregamento
@@ -202,5 +195,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  // LOGOUT
+  function logout() {
+    localStorage.removeItem("token");
+    // alert("Deslogado com sucesso!");
+    location.href = "index.html";
   }
 });
