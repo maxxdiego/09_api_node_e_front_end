@@ -1,3 +1,10 @@
+  // AXIOS CONFIG
+  const axiosConfig = {
+    headers: {
+      authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  };
+
 // LOGIN
 async function login() {
     try {
