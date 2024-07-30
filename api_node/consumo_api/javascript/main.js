@@ -5,31 +5,7 @@ const axiosConfig = {
   },
 };
 
-// LOGIN
-function login() {
-  var emailField = document.getElementById("email");
-  var passwordField = document.getElementById("password");
-
-  var email = emailField.value;
-  var password = passwordField.value;
-
-  axios
-    .post("https://09-api-node.vercel.app/auth", {
-      email,
-      password,
-    })
-    .then((res) => {
-      var token = res.data.token;
-      localStorage.setItem("token", token);
-      axiosConfig.headers.authorization =
-        "Bearer " + localStorage.getItem("token");
-      // alert("Login realizado com sucesso!");
-      location.href = "home.html";
-    })
-    .catch((err) => {
-      alert("Login incorreto!");
-    });
-}
+window.onload(getGames);
 
 // LOGOUT
 function logout() {
@@ -44,9 +20,12 @@ const updateBtn = document.getElementById("updateBtn");
 updateBtn.addEventListener("click", updateGame);
 
 // LISTANDO OS JOGOS
-axios
-  .get("https://09-api-node.vercel.app/games", axiosConfig)
-  .then((response) => {
+async function getGames() {
+  try {
+    const response = await axios.get(
+      "https://09-api-node.vercel.app/games",
+      axiosConfig
+    );
     const games = response.data.games;
     const listGames = document.getElementById("games");
 
@@ -98,10 +77,10 @@ axios
       item.appendChild(editBtn);
       listGames.appendChild(item);
     });
-  })
-  .catch((error) => {
+  } catch (error) {
     console.log(error);
-  });
+  }
+}
 
 // CADASTRO
 // Capturando o botão de cadastrar
@@ -110,50 +89,54 @@ const createBtn = document.getElementById("createBtn");
 createBtn.addEventListener("click", createGame);
 
 // Função para CADASTRAR games
-function createGame() {
-  const form = document.getElementById("createForm");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita o envio padrão do formulário
-  });
-
-  const titleInput = document.getElementById("title");
-  const platformInput = document.getElementById("platform");
-  const yearInput = document.getElementById("year");
-  const priceInput = document.getElementById("price");
-
-  const game = {
-    title: titleInput.value,
-    platform: platformInput.value,
-    year: yearInput.value,
-    price: priceInput.value,
-  };
-  axios
-    .post("https://09-api-node.vercel.app/game", game, axiosConfig)
-    .then((response) => {
-      if (response.status == 201) {
-        alert("Game cadastrado!");
-        location.href = "home.html";
-      }
-    })
-    .catch((err) => {
-      console.log(err);
+async function createGame() {
+  try {
+    const form = document.getElementById("createForm");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
     });
+
+    const titleInput = document.getElementById("title");
+    const platformInput = document.getElementById("platform");
+    const yearInput = document.getElementById("year");
+    const priceInput = document.getElementById("price");
+
+    const game = {
+      title: titleInput.value,
+      platform: platformInput.value,
+      year: yearInput.value,
+      price: priceInput.value,
+    };
+
+    const response = await axios.post(
+      "https://09-api-node.vercel.app/game",
+      game,
+      axiosConfig
+    );
+    if (response.status == 201) {
+      alert("Game cadastrado!");
+      location.href = "home.html";
+    }
+  } catch (error) {
+    console.log(err);
+  }
 }
 
 // EXCLUSÃO
 
 // Função para DELETAR games
-function deleteGame(listItem) {
-  const id = listItem.getAttribute("data-id");
-  axios
-    .delete(`https://09-api-node.vercel.app/game/${id}`, axiosConfig)
-    .then((response) => {
-      alert("Game deletado!");
-      location.reload();
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+async function deleteGame(listItem) {
+  try {
+    const id = listItem.getAttribute("data-id");
+    await axios.delete(
+      `https://09-api-node.vercel.app/game/${id}`,
+      axiosConfig
+    );
+    alert("Game deletado!");
+    location.reload();
+  } catch (error) {
+    console.log(err);
+  }
 }
 
 // Função para carregar formulário de edição
@@ -174,36 +157,38 @@ function loadForm(listItem) {
 // ALTERAÇÃO
 
 // Função para ALTERAR games
-function updateGame() {
-  const form = document.getElementById("editForm");
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Evita o envio padrão do formulário
-  });
-
-  const idInput = document.getElementById("idEdit");
-  const titleInput = document.getElementById("titleEdit");
-  const platformInput = document.getElementById("platformEdit");
-  const yearInput = document.getElementById("yearEdit");
-  const priceInput = document.getElementById("priceEdit");
-
-  const game = {
-    title: titleInput.value,
-    platform: platformInput.value,
-    year: yearInput.value,
-    price: priceInput.value,
-  };
-
-  var id = idInput.value;
-
-  axios
-    .put(`https://09-api-node.vercel.app/game/${id}`, game, axiosConfig)
-    .then((response) => {
-      if (response.status == 200) {
-        alert("Game atualizado!");
-        location.reload();
-      }
-    })
-    .catch((err) => {
-      console.log(err);
+async function updateGame() {
+  try {
+    const form = document.getElementById("editForm");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
     });
+
+    const idInput = document.getElementById("idEdit");
+    const titleInput = document.getElementById("titleEdit");
+    const platformInput = document.getElementById("platformEdit");
+    const yearInput = document.getElementById("yearEdit");
+    const priceInput = document.getElementById("priceEdit");
+
+    const game = {
+      title: titleInput.value,
+      platform: platformInput.value,
+      year: yearInput.value,
+      price: priceInput.value,
+    };
+
+    var id = idInput.value;
+
+    const response = await axios.put(
+      `https://09-api-node.vercel.app/game/${id}`,
+      game,
+      axiosConfig
+    );
+    if (response.status == 200) {
+      alert("Game atualizado!");
+      location.reload();
+    }
+  } catch (error) {
+    console.log(error);
+  }
 }
