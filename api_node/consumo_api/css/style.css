@@ -207,8 +207,6 @@ input {
   color: var(--secondary-color);
   font-family: "Poppins";
   font-size: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 #loading img {
