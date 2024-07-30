@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function getGames() {
     // Mostrar a mensagem de carregamento
     const loadingElement = document.getElementById("loading");
-    loadingElement.style.display = "block";
+    loadingElement.style.display = "flex";
 
     try {
       const response = await axios.get(
