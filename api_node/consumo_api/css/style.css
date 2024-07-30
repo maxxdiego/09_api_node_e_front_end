@@ -196,7 +196,7 @@ input {
   border-radius: 0.5rem;
 }
 
-.homeContent .listGamesCard .loading {
+#loading {
 color: var(--secondary-color);
 }
 
