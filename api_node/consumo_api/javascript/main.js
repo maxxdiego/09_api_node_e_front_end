@@ -5,49 +5,10 @@ const axiosConfig = {
   },
 };
 
-// Capturando o botão de cadastrar
-const createBtn = document.getElementById("createBtn");
-// Escuta ao evento click no botão
-createBtn.addEventListener("click", createGame);
 // Capturando o botão de alterar
 const updateBtn = document.getElementById("updateBtn");
 // Escuta ao evento click no botão de alterar
 updateBtn.addEventListener("click", updateGame);
-
-// CADASTRO
-// Função para CADASTRAR games
-async function createGame() {
-  try {
-    const form = document.getElementById("createForm");
-    form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Evita o envio padrão do formulário
-    });
-
-    const titleInput = document.getElementById("title");
-    const platformInput = document.getElementById("platform");
-    const yearInput = document.getElementById("year");
-    const priceInput = document.getElementById("price");
-
-    const game = {
-      title: titleInput.value,
-      platform: platformInput.value,
-      year: yearInput.value,
-      price: priceInput.value,
-    };
-
-    const response = await axios.post(
-      "https://09-api-node.vercel.app/game",
-      game,
-      axiosConfig
-    );
-    if (response.status == 201) {
-      alert("Game cadastrado!");
-      location.href = "home.html";
-    }
-  } catch (error) {
-    console.log(err);
-  }
-}
 
 // LISTANDO OS JOGOS
 async function getGames() {
@@ -143,6 +104,46 @@ function loadForm(listItem) {
   document.getElementById("platformEdit").value = platform;
   document.getElementById("yearEdit").value = year;
   document.getElementById("priceEdit").value = price;
+}
+
+// Capturando o botão de cadastrar
+const createBtn = document.getElementById("createBtn");
+// Escuta ao evento click no botão
+createBtn.addEventListener("click", createGame);
+
+// CADASTRO
+// Função para CADASTRAR games
+async function createGame() {
+  try {
+    const form = document.getElementById("createForm");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita o envio padrão do formulário
+    });
+
+    const titleInput = document.getElementById("title");
+    const platformInput = document.getElementById("platform");
+    const yearInput = document.getElementById("year");
+    const priceInput = document.getElementById("price");
+
+    const game = {
+      title: titleInput.value,
+      platform: platformInput.value,
+      year: yearInput.value,
+      price: priceInput.value,
+    };
+
+    const response = await axios.post(
+      "https://09-api-node.vercel.app/game",
+      game,
+      axiosConfig
+    );
+    if (response.status == 201) {
+      alert("Game cadastrado!");
+      location.href = "home.html";
+    }
+  } catch (error) {
+    console.log(err);
+  }
 }
 
 // ALTERAÇÃO
