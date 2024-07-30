@@ -5,8 +5,6 @@ const axiosConfig = {
   },
 };
 
-window.onload(getGames);
-
 // LOGOUT
 function logout() {
   localStorage.removeItem("token");
@@ -19,27 +17,28 @@ const updateBtn = document.getElementById("updateBtn");
 // Escuta ao evento click no botão de alterar
 updateBtn.addEventListener("click", updateGame);
 
-// LISTANDO OS JOGOS
-async function getGames() {
-  try {
-    const response = await axios.get(
-      "https://09-api-node.vercel.app/games",
-      axiosConfig
-    );
-    const games = response.data.games;
-    const listGames = document.getElementById("games");
+document.addEventListener("DOMContentLoaded", function () {
+  // LISTANDO OS JOGOS
+  async function getGames() {
+    try {
+      const response = await axios.get(
+        "https://09-api-node.vercel.app/games",
+        axiosConfig
+      );
+      const games = response.data.games;
+      const listGames = document.getElementById("games");
 
-    games.forEach((game) => {
-      let item = document.createElement("ul");
+      games.forEach((game) => {
+        let item = document.createElement("ul");
 
-      // Setando os atributos ID, título, price e descrição para cada game
-      item.setAttribute("data-id", game._id);
-      item.setAttribute("data-title", game.title);
-      item.setAttribute("data-platform", game.platform);
-      item.setAttribute("data-year", game.year);
-      item.setAttribute("data-price", game.price);
+        // Setando os atributos ID, título, price e descrição para cada game
+        item.setAttribute("data-id", game._id);
+        item.setAttribute("data-title", game.title);
+        item.setAttribute("data-platform", game.platform);
+        item.setAttribute("data-year", game.year);
+        item.setAttribute("data-price", game.price);
 
-      item.innerHTML = `<img src="images/game_cd_cover.png" alt="Jogo em estoque">
+        item.innerHTML = `<img src="images/game_cd_cover.png" alt="Jogo em estoque">
       <h3>${game.title}</h3>
         <li>Plataforma: ${game.platform}</li> 
         <li>Ano: ${game.year}</li> 
@@ -48,39 +47,40 @@ async function getGames() {
           currency: "BRL",
         })}</li>`;
 
-      var deleteBtn = document.createElement("button");
-      deleteBtn.innerHTML = "Deletar";
-      deleteBtn.classList.add("btnDel");
-      deleteBtn.addEventListener("click", () => {
-        deleteGame(item);
-      });
+        var deleteBtn = document.createElement("button");
+        deleteBtn.innerHTML = "Deletar";
+        deleteBtn.classList.add("btnDel");
+        deleteBtn.addEventListener("click", () => {
+          deleteGame(item);
+        });
 
-      var editBtn = document.createElement("button");
-      editBtn.innerHTML = "Editar";
-      editBtn.classList.add("btnEdit");
-      editBtn.addEventListener("click", () => {
-        var modal = document.querySelector(".editModal");
-        modal.style.display = "block";
-        var span = document.querySelector(".modalClose");
-        span.onclick = () => {
-          modal.style.display = "none";
-        };
-        window.onclick = (event) => {
-          if (event.target == modal) {
+        var editBtn = document.createElement("button");
+        editBtn.innerHTML = "Editar";
+        editBtn.classList.add("btnEdit");
+        editBtn.addEventListener("click", () => {
+          var modal = document.querySelector(".editModal");
+          modal.style.display = "block";
+          var span = document.querySelector(".modalClose");
+          span.onclick = () => {
             modal.style.display = "none";
-          }
-        };
-        loadForm(item);
-      });
+          };
+          window.onclick = (event) => {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          };
+          loadForm(item);
+        });
 
-      item.appendChild(deleteBtn);
-      item.appendChild(editBtn);
-      listGames.appendChild(item);
-    });
-  } catch (error) {
-    console.log(error);
+        item.appendChild(deleteBtn);
+        item.appendChild(editBtn);
+        listGames.appendChild(item);
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
-}
+});
 
 // CADASTRO
 // Capturando o botão de cadastrar
