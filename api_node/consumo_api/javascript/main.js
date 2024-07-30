@@ -5,18 +5,6 @@ const axiosConfig = {
   },
 };
 
-// LOGOUT
-function logout() {
-  localStorage.removeItem("token");
-  // alert("Deslogado com sucesso!");
-  location.href = "index.html";
-}
-
-// Capturando o botão de alterar
-const updateBtn = document.getElementById("updateBtn");
-// Escuta ao evento click no botão de alterar
-updateBtn.addEventListener("click", updateGame);
-
 document.addEventListener("DOMContentLoaded", function () {
   // LISTANDO OS JOGOS
   async function getGames() {
@@ -82,11 +70,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// CADASTRO
 // Capturando o botão de cadastrar
 const createBtn = document.getElementById("createBtn");
 // Escuta ao evento click no botão
 createBtn.addEventListener("click", createGame);
+// Capturando o botão de alterar
+const updateBtn = document.getElementById("updateBtn");
+// Escuta ao evento click no botão de alterar
+updateBtn.addEventListener("click", updateGame);
+
+// CADASTRO
 
 // Função para CADASTRAR games
 async function createGame() {
@@ -191,4 +184,11 @@ async function updateGame() {
   } catch (error) {
     console.log(error);
   }
+}
+
+// LOGOUT
+function logout() {
+  localStorage.removeItem("token");
+  // alert("Deslogado com sucesso!");
+  location.href = "index.html";
 }
