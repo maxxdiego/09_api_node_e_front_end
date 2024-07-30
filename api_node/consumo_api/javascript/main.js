@@ -15,6 +15,41 @@ document.addEventListener("DOMContentLoaded", function () {
   // Escuta ao evento click no botão de alterar
   updateBtn.addEventListener("click", updateGame);
 
+  // CADASTRO
+  // Função para CADASTRAR games
+  async function createGame() {
+    try {
+      const form = document.getElementById("createForm");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+      });
+
+      const titleInput = document.getElementById("title");
+      const platformInput = document.getElementById("platform");
+      const yearInput = document.getElementById("year");
+      const priceInput = document.getElementById("price");
+
+      const game = {
+        title: titleInput.value,
+        platform: platformInput.value,
+        year: yearInput.value,
+        price: priceInput.value,
+      };
+
+      const response = await axios.post(
+        "https://09-api-node.vercel.app/game",
+        game,
+        axiosConfig
+      );
+      if (response.status == 201) {
+        alert("Game cadastrado!");
+        location.href = "home.html";
+      }
+    } catch (error) {
+      console.log(err);
+    }
+  }
+
   // LISTANDO OS JOGOS
   async function getGames() {
     try {
@@ -77,43 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(error);
     }
   }
+  getGames()
 });
-
-// CADASTRO
-
-// Função para CADASTRAR games
-async function createGame() {
-  try {
-    const form = document.getElementById("createForm");
-    form.addEventListener("submit", function (event) {
-      event.preventDefault(); // Evita o envio padrão do formulário
-    });
-
-    const titleInput = document.getElementById("title");
-    const platformInput = document.getElementById("platform");
-    const yearInput = document.getElementById("year");
-    const priceInput = document.getElementById("price");
-
-    const game = {
-      title: titleInput.value,
-      platform: platformInput.value,
-      year: yearInput.value,
-      price: priceInput.value,
-    };
-
-    const response = await axios.post(
-      "https://09-api-node.vercel.app/game",
-      game,
-      axiosConfig
-    );
-    if (response.status == 201) {
-      alert("Game cadastrado!");
-      location.href = "home.html";
-    }
-  } catch (error) {
-    console.log(err);
-  }
-}
 
 // EXCLUSÃO
 
