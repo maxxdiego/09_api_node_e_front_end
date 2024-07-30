@@ -24,15 +24,15 @@ mongoose.connect(
 app.get("/", (req, res) => {
   res.json([
     {
-      api_endpoints: {
-        get_games: "/games",
-        create_game: "/game",
-        delete_game: "/game/:id",
-        update_game: "/game/:id",
-        get_one_game: "/game/:id",
+      get_games: {
+        href: "https://09-api-node.vercel.app/games",
       },
       front_end: {
-        url: "https://consumo-api-node.vercel.app/"
+        href: "https://consumo-api-node.vercel.app/"
+      },
+      default_user: {
+        email: "admin@email.com",
+        password: "admin"
       }
     },
   ]);
