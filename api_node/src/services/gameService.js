@@ -11,11 +11,12 @@ class gameService {
         }
     }
 
-    async Create(title, year, price) {
+    async Create(title, platform, year, price) {
         try{
             const newGame = new Game({
                 title,
                 year,
+                platform,
                 price
             })
             await newGame.save()
@@ -33,10 +34,11 @@ class gameService {
         }
     }
 
-    async Update(id, title, year, price) {
+    async Update(id, title, platform, year, price) {
         try {
             await Game.findByIdAndUpdate(id, {
                 title,
+                platform,
                 year,
                 price
             })
