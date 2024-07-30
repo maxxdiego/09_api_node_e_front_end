@@ -204,6 +204,10 @@ input {
   color: var(--secondary-color);
 }
 
+#loading img {
+width: 8rem;
+}
+
 .homeContent .listGamesCard .games {
   display: grid;
   grid-template-columns: 17% 17% 17% 17% 17%;
