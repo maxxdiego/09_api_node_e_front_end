@@ -51,18 +51,18 @@
 /* Fim estilos gerais */
 
 /* Início Form */
-.formPrimary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 input {
   padding: 0.8rem;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   border-radius: 0.3rem;
+}
+
+.formPrimary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .inputPrimary {
@@ -186,6 +186,23 @@ input {
 /* Fim conteúdo Login */
 
 /* Início conteúdo Home */
+#loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 50vh;
+  color: var(--secondary-color);
+  font-family: "Poppins";
+  font-size: 1rem;
+}
+
+#loading img {
+  width: 5rem;
+}
+
 .homeContent {
   display: flex;
   flex-direction: column;
@@ -208,23 +225,6 @@ input {
   -webkit-backdrop-filter: blur(2px);
   border: solid 1px var(--primary-alpha);
   border-radius: 0.5rem;
-}
-
-#loading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  min-height: 50vh;
-  color: var(--secondary-color);
-  font-family: "Poppins";
-  font-size: 1rem;
-}
-
-#loading img {
-  width: 5rem;
 }
 
 .homeContent .listGamesCard .games {
@@ -400,6 +400,7 @@ input {
     background-attachment: scroll;
   }
 
+  /* Início do conteúdo Login */
   .loginContent .logo .logoImg {
     max-width: 16rem;
   }
@@ -413,6 +414,17 @@ input {
   .loginContent .loginCard .loginCardHeader {
     margin-bottom: 1rem;
   }
+  /* Fim do conteúdo Login */
+
+  /* Início do conteúdo Home */
+  .homeContent .listGamesCard {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: none;
+  }
 
   .homeContent .listGamesCard .games {
     grid-template-columns: 1fr 1fr 1fr;
@@ -425,15 +437,7 @@ input {
   .homeContent .listGamesCard .games .btnEdit {
     background-color: var(--primary-color);
   }
-
-  .homeContent .listGamesCard {
-    width: 100%;
-    height: 100%;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    border-radius: none;
-  }
+  /* Fim do conteúdo Home */
 
   .editContent {
     width: 60%;
@@ -453,6 +457,7 @@ input {
 }
 
 @media (max-width: 1200px) and (max-height: 667px) {
+  /* Início do conteúdo Login */
   .loginContent .loginCard {
     width: 50%;
     height: 65%;
@@ -467,6 +472,7 @@ input {
     padding: 1rem;
     margin-bottom: 0;
   }
+  /* Fim do conteúdo Login */
 }
 
 @media (max-width: 768px) {
@@ -474,19 +480,11 @@ input {
     background-attachment: scroll;
   }
 
+  /* Início Navbar */
   .navbar .logo img {
     padding: 0.5rem;
     margin-left: 0.1rem;
     width: 3.5rem;
-  }
-
-  .menuBtn {
-    display: block;
-    z-index: 999;
-  }
-
-  #menuIcon.active:before {
-    content: "\f00d";
   }
 
   .navbar .menuItems {
@@ -503,10 +501,6 @@ input {
     transition: all 0.3s ease;
   }
 
-  #menuItems.active {
-    left: 0;
-  }
-
   .navbar .menuItems li {
     width: 80%;
     font-size: 1.2rem;
@@ -514,19 +508,34 @@ input {
     border-bottom: 2px outset var(--label-color);
   }
 
+  .menuBtn {
+    display: block;
+    z-index: 999;
+  }
+
+  #menuIcon.active:before {
+    content: "\f00d";
+  }
+
+  #menuItems.active {
+    left: 0;
+  }
+  /* Fim Navbar */
+
   .title {
     font-size: 0.8rem;
+  }
+
+  /* Início do conteúdo Login */
+  .loginContent {
+    flex-direction: column;
+    justify-content: center;
   }
 
   .loginContent .logo .logoImg {
     max-width: 20rem;
     margin-bottom: 4rem;
     margin-top: -5rem;
-  }
-
-  .loginContent {
-    flex-direction: column;
-    justify-content: center;
   }
 
   .loginContent .loginCard {
@@ -539,6 +548,9 @@ input {
     margin-bottom: 1.5rem;
   }
 
+  /* Fim di conteúdo Login */
+
+  /* Início do conteúdo Home */
   .homeContent .listGamesCard {
     width: 100%;
     height: 100%;
@@ -565,7 +577,7 @@ input {
   .homeContent .listGamesCard .games .btnDel {
     display: none;
   }
-  
+
   .homeContent .listGamesCard .games .btnEdit {
     display: none;
   }
@@ -576,6 +588,8 @@ input {
     align-items: center;
     font-size: 0.5rem;
   }
+
+  /* Fim do conteúdo Home */
 
   .editContent {
     width: 90%;
