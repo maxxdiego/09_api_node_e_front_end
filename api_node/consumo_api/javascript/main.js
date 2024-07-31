@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       games.forEach((game) => {
         let item = document.createElement("ul");
-
+        item.classList.add("listGames");
         // Setando os atributos ID, título, price e descrição para cada game
         item.setAttribute("data-id", game._id);
         item.setAttribute("data-title", game.title);

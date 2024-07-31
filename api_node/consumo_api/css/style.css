@@ -299,6 +299,12 @@ input {
 .homeContent .listGamesCard .games .btnEdit:hover {
   background-color: var(--primary-color);
 }
+
+.homeContent .listGamesCard .games .listGames {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* Fim conteúdo Home */
 
 /* Início conteúdo Cadastro */
@@ -495,6 +501,13 @@ input {
 
   .title {
     font-size: 0.8rem;
+  }
+
+  .homeContent .listGamesCard {
+    width: 100%;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
   }
 
   .loginContent .logo .logoImg {
