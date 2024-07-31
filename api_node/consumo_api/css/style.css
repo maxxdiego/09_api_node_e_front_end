@@ -430,6 +430,15 @@ input {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+.homeContent .listGamesCard .games img {
+    border: none;
+    filter: none;
+    }
+
+    .homeContent .listGamesCard .games img:hover{
+    box-shadow: none;
+      }
+
   .homeContent .listGamesCard .games .btnDel {
     background-color: #f22323;
   }
@@ -572,7 +581,6 @@ input {
   }
 
   .homeContent .listGamesCard .games img:hover {
-    border: none;
     box-shadow: none;
   }
 
