@@ -576,18 +576,18 @@ input {
   }
 
   .homeContent .listGamesCard .games .btnDel {
-    display: none;
+    display: block;
   }
 
   .homeContent .listGamesCard .games .btnEdit {
-    display: none;
+    display: block;
   }
 
   .homeContent .listGamesCard .games .listGames {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 
   /* Fim do conteúdo Home */
