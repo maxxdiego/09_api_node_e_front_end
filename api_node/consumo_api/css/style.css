@@ -421,7 +421,7 @@ input {
   .homeContent .listGamesCard .games .btnDel {
     background-color: #f22323;
   }
-  
+
   .homeContent .listGamesCard .games .btnEdit {
     background-color: var(--primary-color);
   }
@@ -433,6 +433,10 @@ input {
     -webkit-backdrop-filter: none;
     border: none;
     border-radius: none;
+  }
+
+  .editContent {
+    width: 90%;
   }
 
   .createContent {
@@ -559,7 +563,7 @@ input {
     background-color: #f22323;
     content: "x";
   }
-  
+
   .homeContent .listGamesCard .games .btnEdit {
     background-color: var(--primary-color);
   }
@@ -568,6 +572,10 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .editContent {
+    width: 90%;
   }
 
   .createContent {
