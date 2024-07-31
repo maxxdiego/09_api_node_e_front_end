@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/fav_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>The Games &copy; 2024</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,14 +14,18 @@
     <main>
         <nav class="navbar">
             <div class="logo">
-                <img src="images/thegames_symbol.png" alt="The Games">
+                <a href="home.html"><img src="images/thegames_symbol.png" alt="The Games"></a>
             </div>
             <div class="menu">
-                <ul class="menuItems">
+                <ul class="menuItems" id="menuItems">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="cadastro.html">Cadastrar jogos</a></li>
                     <li><a href="#" onclick="logout()">Logout</a></li>
                 </ul>
+            </div>
+            <div class="menuBtn" id="menuBtn">
+                <!-- Ícone do Font Awesome -->
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
             </div>
         </nav>
         <!-- CONTAINER -->
