@@ -419,6 +419,14 @@ input {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .homeContent .listGamesCard .games .btnDel {
+    background-color: #f22323;
+  }
+  
+  .homeContent .listGamesCard .games .btnEdit {
+    background-color: var(--primary-color);
+  }
+
   .homeContent .listGamesCard {
     width: 100%;
     height: 100%;
@@ -539,6 +547,14 @@ input {
 
   .homeContent .listGamesCard .games {
     grid-template-columns: 1fr;
+  }
+
+  .homeContent .listGamesCard .games .btnDel {
+    background-color: #f22323;
+  }
+  
+  .homeContent .listGamesCard .games .btnEdit {
+    background-color: var(--primary-color);
   }
 
   .homeContent .listGamesCard .games .listGames {
