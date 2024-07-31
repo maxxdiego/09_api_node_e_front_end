@@ -240,7 +240,6 @@ input {
 .homeContent .listGamesCard .games img {
   width: 50%;
   border-radius: 0.5rem;
-  border-radius: 0.5rem;
   border: solid 1px var(--primary-color);
   padding-top: 1rem;
   filter: grayscale();
@@ -547,6 +546,10 @@ input {
 
   .homeContent .listGamesCard .games {
     grid-template-columns: 1fr;
+  }
+
+  .homeContent .listGamesCard .games img {
+    border: none;
   }
 
   .homeContent .listGamesCard .games .btnDel {
