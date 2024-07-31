@@ -300,11 +300,6 @@ input {
   background-color: var(--primary-color);
 }
 
-.homeContent .listGamesCard .games .listGames {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 /* Fim conteúdo Home */
 
 /* Início conteúdo Cadastro */
@@ -531,6 +526,12 @@ input {
 
   .loginContent .loginCard .loginCardHeader {
     margin-bottom: 1.5rem;
+  }
+
+  .homeContent .listGamesCard .games .listGames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .createContent {
