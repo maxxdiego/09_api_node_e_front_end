@@ -563,11 +563,11 @@ input {
   }
 
   .homeContent .listGamesCard .games .btnDel:hover {
-    background-color: #f22323;
+    display: none;
   }
   
   .homeContent .listGamesCard .games .btnEdit:hover {
-    background-color: var(--primary-color);
+    display: none;
   }
 
   .homeContent .listGamesCard .games .listGames {
