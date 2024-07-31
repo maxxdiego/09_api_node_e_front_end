@@ -561,12 +561,12 @@ input {
   }
 
   .homeContent .listGamesCard .games {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .homeContent .listGamesCard .games img {
     border: none;
-    width: 30%;
+    width: 40%;
   }
 
   .homeContent .listGamesCard .games img:hover {
