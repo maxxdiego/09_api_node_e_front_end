@@ -561,18 +561,19 @@ input {
     border: solid 1px var(--primary-color);
   }
 
-  .homeContent .listGamesCard .games .btnDel {
-    display: none;
+  .homeContent .listGamesCard .games .btnDel:hover {
+    background-color: #f22323;
   }
-
-  .homeContent .listGamesCard .games .btnEdit {
-    display: none;
+  
+  .homeContent .listGamesCard .games .btnEdit:hover {
+    background-color: var(--primary-color);
   }
 
   .homeContent .listGamesCard .games .listGames {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 0.5rem;
   }
 
   .editContent {
