@@ -10,7 +10,7 @@ def loginAPI():
         'password' : 'admin'
     }
     # Endpoint que realiza a autenticação
-    url = 'http://localhost:4000/auth'
+    url = 'https://09-api-node.vercel.app/auth'
     # Enviando os dados de usuário para API
     response = requests.post(url, json=user)
     
@@ -34,12 +34,13 @@ loginAPI()
 # Função para enviar dados para API (cadastrar jogos)
 def cadastrarGames():
     # Endpoint para cadastrar um jogo (POST)
-    url = 'http://localhost:4000/game'
+    url = 'https://09-api-node.vercel.app/game'
     # Dados a serem enviados para a API 
     data = {
-        'title': 'Exemplo de Jogo',
-        'year': 2022,
-        'price': 49.99
+        'title': 'Jogo inserido pelo App Python',
+        'platform': 'PC (Windows)',
+        'year': 2024,
+        'price': 100
     }
     # Realiza uma requisição do tipo POST enviando os dados para a API e também o token de autenticação no cabeçalho (headers)
     response = requests.post(url, json=data, headers=headers)
@@ -56,7 +57,7 @@ cadastrarGames()
 # Função para listar os dados da API
 def listarGames():
     # Endpoint para obter a lista de jogos
-    url = 'http://localhost:4000/games'
+    url = 'https://09-api-node.vercel.app/games'
     # Realiza uma requisição do tipo GET e envia o token de autenticação no cabeçalho da requisição (headers)
     response = requests.get(url, headers=headers)
     # Verifica se a requisição foi bem sucedida (status code 200)
@@ -68,6 +69,7 @@ def listarGames():
         print("Dados recebidos da API:")
         for g in gamesjson['games']:
             print(f' Título: {g['title']}')
+            print(f' Plataforma: {g['platform']}')
             print(f' Ano: {g['year']}')
             print(f' Preço: {g['price']}')
             print()
