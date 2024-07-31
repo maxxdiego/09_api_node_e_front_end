@@ -197,3 +197,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// Menu responsivo
+document.querySelector("#menuBtn").addEventListener("click", () => {
+  document.querySelector("#menuItems").classList.toggle("active");
+  document.querySelector("#menuIcon").classList.toggle("active");
+});
