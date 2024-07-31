@@ -416,7 +416,7 @@ input {
   }
 
   .homeContent .listGamesCard .games {
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr;
   }
 
   .homeContent .listGamesCard {
@@ -507,15 +507,6 @@ input {
     font-size: 0.8rem;
   }
 
-  .homeContent .listGamesCard {
-    width: 100%;
-    height: 100%;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    border-radius: none;
-  }
-
   .loginContent .logo .logoImg {
     max-width: 20rem;
     margin-bottom: 4rem;
@@ -535,6 +526,19 @@ input {
 
   .loginContent .loginCard .loginCardHeader {
     margin-bottom: 1.5rem;
+  }
+
+  .homeContent .listGamesCard {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: none;
+  }
+
+  .homeContent .listGamesCard .games {
+    grid-template-columns: 1fr;
   }
 
   .homeContent .listGamesCard .games .listGames {
