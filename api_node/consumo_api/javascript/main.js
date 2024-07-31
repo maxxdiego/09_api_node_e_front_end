@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
           })}</li>`;
 
         var deleteBtn = document.createElement("button");
-        deleteBtn.innerHTML = "Deletar";
+        deleteBtn.innerHTML = "X";
         deleteBtn.classList.add("btnDel");
         deleteBtn.addEventListener("click", () => {
           deleteGame(item);
