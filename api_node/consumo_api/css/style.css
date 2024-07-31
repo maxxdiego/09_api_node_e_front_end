@@ -562,7 +562,7 @@ input {
 
   .homeContent .listGamesCard .games {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 6rem;
   }
 
   .homeContent .listGamesCard .games img {
