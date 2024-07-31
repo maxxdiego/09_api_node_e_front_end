@@ -419,6 +419,15 @@ input {
     grid-template-columns: 1fr;
   }
 
+  .homeContent .listGamesCard {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: none;
+  }
+
   .createContent {
     width: 50%;
   }
