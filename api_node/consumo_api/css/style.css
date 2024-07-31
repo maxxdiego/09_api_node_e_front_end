@@ -551,6 +551,9 @@ input {
   .homeContent .listGamesCard .games img {
     border: none;
   }
+  .homeContent .listGamesCard .games img:hover {
+    border: solid 1px var(--primary-color);
+  }
 
   .homeContent .listGamesCard .games .btnDel {
     background-color: #f22323;
