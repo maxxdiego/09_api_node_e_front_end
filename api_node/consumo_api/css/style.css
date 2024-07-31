@@ -549,7 +549,7 @@ input {
   }
 
   .homeContent .listGamesCard .games {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .homeContent .listGamesCard .games img {
@@ -562,11 +562,11 @@ input {
     box-shadow: none;
   }
 
-  .homeContent .listGamesCard .games .btnDel:hover {
+  .homeContent .listGamesCard .games .btnDel {
     display: none;
   }
   
-  .homeContent .listGamesCard .games .btnEdit:hover {
+  .homeContent .listGamesCard .games .btnEdit {
     display: none;
   }
 
