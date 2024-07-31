@@ -562,12 +562,12 @@ input {
 
   .homeContent .listGamesCard .games {
     grid-template-columns: 1fr;
-    gap: 1.2rem 0.9rem;
+    gap: 2rem;
   }
 
   .homeContent .listGamesCard .games img {
     border: none;
-    width: 60%;
+    width: 70%;
     filter: none;
   }
 
@@ -589,7 +589,6 @@ input {
     flex-direction: column;
     align-items: center;
     font-size: 1.2rem;
-    text-align: left;
   }
 
   /* Fim do conteúdo Home */
