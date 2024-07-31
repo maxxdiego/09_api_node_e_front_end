@@ -560,12 +560,11 @@ input {
   }
 
   .homeContent .listGamesCard .games .btnDel {
-    background-color: #f22323;
-    content: "x";
+    display: none;
   }
 
   .homeContent .listGamesCard .games .btnEdit {
-    background-color: var(--primary-color);
+    display: none;
   }
 
   .homeContent .listGamesCard .games .listGames {
