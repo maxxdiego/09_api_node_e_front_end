@@ -561,7 +561,7 @@ input {
   }
 
   .homeContent .listGamesCard .games {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.9rem 0.9rem;
   }
 
@@ -576,18 +576,18 @@ input {
   }
 
   .homeContent .listGamesCard .games .btnDel {
-    display: block;
+    display: none;
   }
 
   .homeContent .listGamesCard .games .btnEdit {
-    display: block;
+    display: none;
   }
 
   .homeContent .listGamesCard .games .listGames {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   /* Fim do conteúdo Home */
