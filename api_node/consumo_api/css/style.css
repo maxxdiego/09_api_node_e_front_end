@@ -567,7 +567,7 @@ input {
 
   .homeContent .listGamesCard .games img {
     border: none;
-    width: 40%;
+    width: 60%;
   }
 
   .homeContent .listGamesCard .games img:hover {
@@ -587,8 +587,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0.9rem;
-    text-align: left;
+    font-size: 1.2rem;
   }
 
   /* Fim do conteúdo Home */
