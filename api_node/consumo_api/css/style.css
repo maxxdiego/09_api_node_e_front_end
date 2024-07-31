@@ -558,7 +558,8 @@ input {
   }
 
   .homeContent .listGamesCard .games img:hover {
-    border: solid 1px var(--primary-color);
+    border: none;
+    box-shadow: none;
   }
 
   .homeContent .listGamesCard .games .btnDel:hover {
