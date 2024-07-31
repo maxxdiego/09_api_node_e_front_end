@@ -109,7 +109,7 @@ input {
 }
 
 .navbar .logo img:hover {
-  filter: brightness(10);
+  filter:brightness(10);
   scale: 0.9;
   cursor: pointer;
   transition: 0.5s;
@@ -380,6 +380,7 @@ input {
 }
 /* Fim Footer */
 
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 425px) {
@@ -394,11 +395,15 @@ input {
   }
 
   .title {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .formPrimary {
+    width: 100%;
   }
 
   .loginContent .logo .logoImg {
-    max-width: 22rem;
+    max-width: 20rem;
     margin-bottom: 4rem;
     margin-top: -5rem;
   }
@@ -419,6 +424,10 @@ input {
     border: 0;
   }
 
+  .createContent {
+    width: 75%;
+  }
+
   .footerContent .footerLeft {
     display: none;
   }
@@ -426,6 +435,8 @@ input {
   .footerContent .footerRight {
     width: 100%;
   }
+
+
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -463,6 +474,10 @@ input {
 
   .btnPrimary {
     height: 3rem;
+  }
+
+  .createContent {
+    width: 80%;
   }
 
   .footerContent .footerLeft {
