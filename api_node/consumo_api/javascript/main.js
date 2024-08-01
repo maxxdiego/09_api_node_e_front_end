@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
           axiosConfig
         );
         if (response.status == 201) {
-          alert("Game cadastrado!");
+          // alert("Game cadastrado!");
           location.href = "home.html";
         }
       } else {
