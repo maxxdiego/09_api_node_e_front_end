@@ -217,16 +217,14 @@ input {
   align-items: center;
   justify-content: center;
   width: 90%;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
   padding: 2rem;
   background-color: var(--fourth-color-alpha);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border: solid 1px var(--primary-alpha);
   border-radius: 0.5rem;
-}
-
-.homeContent .listGamesCard .title {
-margin-top: 6rem;
 }
 
 .homeContent .listGamesCard .games {
@@ -417,11 +415,17 @@ margin-top: 6rem;
   .homeContent .listGamesCard {
     width: 100%;
     height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border: none;
     border-radius: none;
   }
+
+  .homeContent .listGamesCard .title {
+    margin-top: 6rem;
+    }
 
   .homeContent .listGamesCard .games {
     grid-template-columns: 1fr 1fr 1fr;
@@ -560,11 +564,17 @@ margin-top: 6rem;
   .homeContent .listGamesCard {
     width: 100%;
     height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border: none;
     border-radius: none;
   }
+
+  .homeContent .listGamesCard .title {
+    margin-top: 6rem;
+    }
 
   .homeContent .listGamesCard .games {
     grid-template-columns: 1fr;
