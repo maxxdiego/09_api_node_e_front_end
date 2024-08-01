@@ -115,21 +115,30 @@ document.addEventListener("DOMContentLoaded", function () {
       const yearInput = document.getElementById("year");
       const priceInput = document.getElementById("price");
 
-      const game = {
-        title: titleInput.value,
-        platform: platformInput.value,
-        year: yearInput.value,
-        price: priceInput.value,
-      };
+      if (
+        titleInput.value &&
+        platformInput.value &&
+        yearInput.value &&
+        priceInput.value !== ""
+      ) {
+        const game = {
+          title: titleInput.value,
+          platform: platformInput.value,
+          year: yearInput.value,
+          price: priceInput.value,
+        };
 
-      const response = await axios.post(
-        "https://09-api-node.vercel.app/game",
-        game,
-        axiosConfig
-      );
-      if (response.status == 201) {
-        alert("Game cadastrado!");
-        location.href = "home.html";
+        const response = await axios.post(
+          "https://09-api-node.vercel.app/game",
+          game,
+          axiosConfig
+        );
+        if (response.status == 201) {
+          alert("Game cadastrado!");
+          location.href = "home.html";
+        }
+      } else {
+        alert("Por favor, preencha todos os campos.");
       }
     } catch (error) {
       console.log(error);
