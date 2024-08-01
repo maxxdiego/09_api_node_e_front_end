@@ -217,14 +217,16 @@ input {
   align-items: center;
   justify-content: center;
   width: 90%;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
   padding: 2rem;
   background-color: var(--fourth-color-alpha);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border: solid 1px var(--primary-alpha);
   border-radius: 0.5rem;
+}
+
+.homeContent .listGamesCard .title {
+margin-top: 6rem;
 }
 
 .homeContent .listGamesCard .games {
@@ -239,18 +241,13 @@ input {
 
 .homeContent .listGamesCard .games img {
   width: 50%;
-  border-radius: 0.5rem;
-  border: solid 1px var(--primary-color);
   padding-top: 1rem;
-  filter: grayscale();
+  cursor: pointer;
 }
 
 .homeContent .listGamesCard .games img:hover {
-  filter: none;
-  cursor: pointer;
   scale: 0.9;
-  transition: 0.2s;
-  box-shadow: 0 8px 32px 0 var(--primary-alpha);
+  transition: 0.3s;
 }
 
 .homeContent .listGamesCard .games h3 {
@@ -576,7 +573,8 @@ input {
 
   .homeContent .listGamesCard .games img {
     border: none;
-    width: 100%;
+    width: 80%;
+    margin-top: 2.5rem;
     filter: none;
   }
 
