@@ -46,8 +46,8 @@ const updateGame = async (req, res) => {
         if(ObjectId.isValid(req.params.id)){
             const id = req.params.id
             const {title, platform, year, price} = req.body
-            const updatedGame = await gameService.Update(id, title, platform, year, price)
-            res.status(200).json({ updatedGame }) //Código 200 (OK) : Requisição feita com sucesso.
+            const game = await gameService.Update(id, title, platform, year, price)
+            res.status(200).json({ game }) //Código 200 (OK) : Requisição feita com sucesso.
         }else{
             res.sendStatus(400) //Código 400 (BAD REQUEST) : Requisição inválida
         }
