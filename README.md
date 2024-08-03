@@ -1,7 +1,12 @@
 # API Node (Express) + Front-end + Python
 ![NPM](https://img.shields.io/npm/l/react)
 
-Link do front-end da API hospedada no vercel: https://consumo-api-node.vercel.app/
+# Descrição
+
+O projeto consiste em uma API Node com o tema "Games" desenvolvido com Express. 
+Para consumo da API foi desenvolvido um front-end com HTML, CSS e Javascript, totalmente responsivo. Além disso, foi desenvolvido uma pequena aplicação em Python que também consome os dados da API.
+
+Link do front-end hospedado no vercel: https://consumo-api-node.vercel.app/
 
 ```bash
 # Usuário administrador
@@ -9,12 +14,7 @@ email: admin@email.com
 senha: admin
 ```
 
-Link da API hospedada no Vercel: https://09-api-node.vercel.app/
-
-# Descrição
-
-O projeto consiste em uma API Node com o tema "Games" desenvolvida com Express. 
-Para consumo da API foi desenvolvido um front-end com HTML, CSS e Javascript, além de uma aplicação em Python.
+Link da API hospedada no Vercel (back-end): https://09-api-node.vercel.app/
 
 ## Como executar
 
