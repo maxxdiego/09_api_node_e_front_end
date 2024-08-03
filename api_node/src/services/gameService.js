@@ -36,13 +36,14 @@ class gameService {
 
     async Update(id, title, platform, year, price) {
         try {
-            await Game.findByIdAndUpdate(id, {
+            const updatedGame = await Game.findByIdAndUpdate(id, {
                 title,
                 platform,
                 year,
                 price
             })
             console.log(`Dados do game com id: ${id} alterados com sucesso.`)
+            return updatedGame
 
         } catch (error) {
             console.log(error)
