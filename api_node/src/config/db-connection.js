@@ -8,7 +8,7 @@ const dbName = process.env.DB_NAME;
 
 const connect = () => {
   mongoose.connect(
-    `mongodb+srv://${dbUser}:${dbPassword}@cluster0.v2pgk.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`
+    `mongodb+srv://${dbUser}:7Z6ZAz4pwGDMHBZx@cluster0.v2pgk.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`
   );
 
   const connection = mongoose.connection;
