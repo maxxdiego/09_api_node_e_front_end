@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-import mongoose from "mongoose";
+import mongoose from "./config/db-connection.js"
 import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
@@ -14,11 +14,6 @@ app.use(express.json());
 app.use(cors());
 app.use("/", gameRoutes);
 app.use("/", userRoutes);
-
-// Iniciando conexão com o banco de dados do MongoDB
-mongoose.connect(
-  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.v2pgk.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority&appName=Cluster0`
-);
 
 // Rota principal
 app.get("/", (req, res) => {
